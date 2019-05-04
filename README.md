@@ -70,7 +70,7 @@ $('body').prng(['round', '*', 100])
 $('textarea').prng(['round', '*', 50, '/', 2])
 
 
-
+5325134743470699
 /* sync */
 /**
 * $.prngSync(config)
@@ -144,6 +144,91 @@ $.prngP(['fround', '-', 100]).then(function(res){
 
 // return Math.fround(prng) * 1000 + 200;
 $.prngP(['fround', '*', 1000, '+', 200]).then(function(res){
+  console.log(res)
+}).catch(function(err){
+  console.log(err)
+})
+
+
+/* numbered string */
+
+/* sync */
+/**
+* $.prngStrSync(num)
+* @param {number} num ~ number string length;
+*/
+
+// return random string of 3 numbers;
+sync = $.prngStrSync(3)
+console.log(sync)
+
+
+/* callback */
+/**
+* $.prngStr(num, cb)
+* @param {number} num ~ number string length;
+* @param {function} cb ~ callback function(err,res)
+*/
+
+// return random string of 10 numbers;
+$.prngStr(10,function(err,res){
+  if(err){return console.log(err)}
+  console.log(res)
+})
+
+
+/* promise */
+/**
+* $.prngStrP(num)
+* @param {number} num ~ number string length;
+*/
+
+// return random string of 5 numbers;
+$.prngStrP(5).then(function(res){
+  console.log(res)
+}).catch(function(err){
+  console.log(err)
+})
+
+
+/* numbered array */
+
+/* sync */
+/**
+* $.prngStrSync(al,nl)
+* @param {number} al ~ array length;
+* @param {number} nl ~ number length;
+*/
+
+// return random numbered array;
+sync = $.prngArrSync(3,4)
+console.log(sync)
+
+
+/* callback */
+/**
+* $.prngStr(al, nl, cb)
+* @param {number} al ~ array length;
+* @param {number} nl ~ number length;
+* @param {function} cb ~ callback function(err,res)
+*/
+
+// return random numbered array;
+$.prngArr(10,12,function(err,res){
+  if(err){return console.log(err)}
+  console.log(res)
+})
+
+
+/* promise */
+/**
+* $.prngStrP(num)
+* @param {number} al ~ array length;
+* @param {number} nl ~ number length;
+*/
+
+// return random numbered array;
+$.prngArrP(5,5).then(function(res){
   console.log(res)
 }).catch(function(err){
   console.log(err)

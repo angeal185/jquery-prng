@@ -91,3 +91,36 @@ $.prngP(['fround', '-', 100, '*', 200]).then(function(res){
 }).catch(function(err){
   console.log(err)
 })
+
+// return random string of 3 numbers;
+console.log($.prngStrSync(3))
+
+// return random string of 10 numbers;
+$.prngStr(10,function(err,res){
+  if(err){return console.log(err)}
+  console.log(res)
+})
+
+// return random string of 5 numbers;
+$.prngStrP(5).then(function(res){
+  console.log(res)
+}).catch(function(err){
+  console.log(err)
+})
+
+// create random numbered array (array length| number length)
+console.log($.prngArrSync(3,4))
+
+// create random numbered array (array length| number length)
+//console.log($.prngARR(20,3))
+$.prngArr(5,6,function(err,res){
+  if(err){return console.log(err)}
+  console.log(res)
+})
+// return Math.fround(prng) * 10 / 2;
+
+$.prngArrP(6,7).then(function(res){
+  console.log(res)
+}).catch(function(err){
+  console.log(err)
+})
