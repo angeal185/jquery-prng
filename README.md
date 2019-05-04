@@ -70,7 +70,6 @@ $('body').prng(['round', '*', 100])
 $('textarea').prng(['round', '*', 50, '/', 2])
 
 
-5325134743470699
 /* sync */
 /**
 * $.prngSync(config)
