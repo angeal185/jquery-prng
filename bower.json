@@ -1,0 +1,25 @@
+{
+  "name": "jquery-prng",
+  "description": "jquery mersenne-twister pseudorandom number generator pluggin",
+  "main": "index.js",
+  "authors": [
+    "ben eaves"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "mersenne-twister",
+    "prng",
+    "pseudo-random-generator",
+    "pseudorandom",
+    "plugin",
+    "jquery",
+    "jquery-plugin",
+    "random"
+  ],
+  "homepage": "https://github.com/angeal185/jquery-prng",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ]
+}

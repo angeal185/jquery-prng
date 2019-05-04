@@ -80,6 +80,10 @@ $('textarea').prng(['round', '*', 50, '/', 2])
 let sync = $.prngSync();
 console.log(sync);
 
+// return Math.round(prng) * 10;
+sync = $.prngSync(['round', '*', 10])
+console.log(sync);
+
 // return Math.round(prng) * 100 - 2;
 sync = $.prngSync(['round', '*', 100, '-', 2])
 console.log(sync);
@@ -94,8 +98,14 @@ console.log(sync);
 * [string, string, number, string, number]
 */
 
-// return Math.floor(prng) * 10 / 2;
-$.prng(['floor', '*', 10, '/', 2], function(err, res){
+// return random base prng
+$.prng(function(err, res){
+  if(err){return console.log(err)}
+  console.log(res)
+});
+
+// return Math.floor(prng) * 100;
+$.prng(['floor', '*', 100], function(err, res){
   if(err){return console.log(err)}
   console.log(res)
 });
@@ -115,9 +125,22 @@ $.prng(['floor', '*', 10, '/', 2], function(err, res){
 * [string, string, number, string, number]
 */
 
-// return Math.fround(prng) * 10 / 2;
+// return random base prng
+$.prngP().then(function(res){
+  console.log(res)
+}).catch(function(err){
+  console.log(err)
+})
 
-$.prngP(['fround', '-', 100, '*', 200]).then(function(res){
+// return Math.fround(prng) - 100;
+$.prngP(['fround', '-', 100]).then(function(res){
+  console.log(res)
+}).catch(function(err){
+  console.log(err)
+})
+
+// return Math.fround(prng) * 1000 + 200;
+$.prngP(['fround', '*', 1000, '+', 200]).then(function(res){
   console.log(res)
 }).catch(function(err){
   console.log(err)
