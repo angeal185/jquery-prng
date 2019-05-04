@@ -27,7 +27,8 @@ $ bower install jquery-prng
 
 ### info
 
-the seed is a generated from a random array of integers put through a fisher yates shuffle.
+the seed is 128bit, generated from an array of random integers and
+then put through a fisher yates shuffle.
 
 ```js
 // accepted methods
