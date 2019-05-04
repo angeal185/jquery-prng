@@ -221,7 +221,7 @@ $.prngArr(10,12,function(err,res){
 
 /* promise */
 /**
-* $.prngStrP(num)
+* $.prngStrP(al,nl)
 * @param {number} al ~ array length;
 * @param {number} nl ~ number length;
 */
